@@ -1,1 +1,1 @@
-# sparkupcms
+# sparkupcms built with CodeIgniter
