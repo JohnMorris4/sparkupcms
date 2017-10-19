@@ -16,10 +16,11 @@ class Subjects extends CI_Controller {
 		//$this->load->view('dashboard');
 	}
 
-	public function add()
-	{
-		$this->template->load('admin', 'default', 'subjects/add');
-		//$this->load->view('dashboard');
+	public function add(){
+		$this->form_validation->set_rules('name', 'Name', 'trim|required|min_length[3]');
+		if($this->form_validation->run() == FALSE) {
+			$this->template->load('admin', 'default', 'subjects/add');
+		}
 	}
 
 	public function delete()
